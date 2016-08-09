@@ -1,5 +1,5 @@
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var autoprefixer = require("autoprefixer");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const autoprefixer = require("autoprefixer");
 const webpack = require("webpack");
 
 module.exports = {
@@ -20,8 +20,8 @@ module.exports = {
 			}
 		},
 		{
-		  test: /\.scss$/,
-		  loader: ExtractTextPlugin.extract("style-loader", "css?sourceMap!postcss-loader!sass?sourceMap")
+			test: /\.scss$/,
+			loader: ExtractTextPlugin.extract("style-loader", "css?sourceMap!postcss-loader!sass?sourceMap")
 		}]
 	},
 	devtool: "source-map",
